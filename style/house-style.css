@@ -15,7 +15,7 @@
 }
 
 .gallery {
-    height: 250px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

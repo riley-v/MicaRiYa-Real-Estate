@@ -18,7 +18,7 @@
         </div>
         <div class="mode-bar">
             <button onclick="buy()" class="unselected" id="buy">Buy</button>
-            <button onclick="sell()" class="selected" id="sell">Sell</button>
+            <button onclick="sell()" class="selected" id="sell">List</button>
             <button onclick="rent()" class="unselected" id="rent">Rent</button>
         </div>
     </div>
@@ -26,7 +26,7 @@
     <div class="content">
         <div class="main-content">
             <div class="left-side">
-                <div class="subtitle">Sell Your Property With a Real Estate Agent</div>
+                <div class="subtitle">List Your Property With a Real Estate Agent</div>
                 <div class="subsection">
                     <p>Feeling overwhelmed?</p>
                     <p>Find a real estate agent to list and promote your home with our partnership with LoopNet!</p>
@@ -37,13 +37,15 @@
             </div>
 
             <div class="right-side">
-                <div class="subtitle">Sell Your Property Yourself</div>
+                <div class="subtitle">List Your Property Yourself</div>
                 <div class="subsection">
                     <p>Click the button below and our experts will ensure that you own the property and take care of all the listing details.</p>
                     <p>You can also set your preferred price and if that price is negotiable. This can always be changed later.</p>
                     <p>It's that easy!</p>
                     <div class="input-section">
-                        <p>Price: $<input type="number" class="house-price" min="0.00" step="1000.00" max="5000000.00" value="750000.00"></p>
+                        <p><input type="radio" id="sell" name="listing" checked><label for="html">Sell</label></p>
+                        <p><input type="radio" id="rent-out" name="listing"><label for="rent-out">Rent out</label></p>
+                        <p>Price: $<input type="number" class="house-price" min="0.00" step="1000.00" max="5000000.00" value="750000.00"> CAD (per month if renting out)</p>
                         <p><input type="checkbox" id="negotiable" checked><label for="negotiable"> Negotiable</label></p>
                     </div>
                 </div>

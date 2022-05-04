@@ -17,7 +17,7 @@
         $( "#price-slider-range" ).slider({
         range: true,
         min: 0,
-        max: 300,
+        max: 400,
         values: [ 0, 150 ],
         slide: function( event, ui ) {
             $( "#price-slider" ).val( "$" + ui.values[ 0 ] * 5000 + " - $" + ui.values[ 1 ] * 5000 );
@@ -66,7 +66,7 @@
         </div>
         <div class="mode-bar">
             <button onclick="buy()" class="selected" id="buy">Buy</button>
-            <button onclick="sell()" class="unselected" id="sell">Sell</button>
+            <button onclick="sell()" class="unselected" id="sell">List</button>
             <button onclick="rent()" class="unselected" id="rent">Rent</button>
         </div>
     </div>
