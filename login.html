@@ -25,12 +25,19 @@
 
     <div class="content">
         <div class="main-content">
-            <div><button onclick="login()" class="login-button">Login with Facebook</button></div>
-            <div><button onclick="login()" class="login-button">Login with Google</button></div>
-            <div><input type="text" class="login-field" placeholder="Username..."></div>
-            <div><input type="text" class="login-field" placeholder="Password..."></div>
-            <div><button onclick="login()" class="login-button">Login with Credentials</button></div>
-            <div><button onclick="login()" class="login-button">Create New Account with Credentials</button></div>
+            <div class="subtitle">Sign Up / Sign In</div>
+            <div>
+                <p><input type="text" class="login-field" placeholder="Email Address..."></p>
+                <p><input type="password" class="login-field" placeholder="Password..."></p>
+                <p><button onclick="login()" class="unselected" style="width: 100px; font-size: 18px;">Sign Up</button></p>
+                <p><button onclick="login()" class="unselected" style="width: 100px; font-size: 18px;">Sign In</button></p>
+            </div>
+            <div class="subtitle">Quick Sign In</div>
+            <div>
+                <p><button onclick="login()" class="unselected" style="width: 200px; font-size: 18px;">Login with Facebook</button></p>
+                <p><button onclick="login()" class="unselected" style="width: 200px; font-size: 18px;">Login with Google</button></p>
+            </div>
+            <p class = "line"></p>
             <a href="#" style="font-size:15px;">Forgot password?</a>
         </div>
 
@@ -60,8 +67,7 @@
 
         function login(){
             localStorage.setItem("log-status", "in");
-            localStorage.setItem("new-mode", "buy");
-            window.location.href = "buy.html";
+            window.location.href = "index.html";
         }
 
         function openChat() {

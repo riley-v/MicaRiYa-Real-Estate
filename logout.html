@@ -25,9 +25,43 @@
 
     <div class="content">
         <div class="main-content">
-            <p>Incoming Offers:</p>
-            <p>Outgoing Offers:</p>
-            <div><button onclick="logout()" class="logout-button">Logout</button></div>
+            <div class="left-side">
+                <div class="subtitle">Your Profile</div>
+                <p><button class="unselected" style="width: 150px; font-size: 18px; margin-left: 10px; margin-right: 10px;">Change Email</button></p>
+                <p><button onclick="logout()" class="unselected" style="width: 150px; font-size: 18px; margin-left: 10px; margin-right: 10px;">Logout</button></p>
+            </div>
+
+            <div class="middle-left">
+                <div class="subtitle">Your Listed Properties</div>
+                <div class="subsection">
+                    <p>2156 Knowlesly Meadows, Vineland | <button class="simple">Edit Listing</button> | <button class="simple">Unlist Listing</button></p>
+                    <p>Incoming Offers:</p>
+                    <p style="padding-left: 10px;">JohnSmith@email.com | $760,000 CAD | <button class="simple">Print Contract</button></p>
+                    <p style="padding-left: 10px;">JaneDoe@email.com | $775,000 CAD | <button class="simple">Print Contract</button></p>
+                    <p class = "line"></p>
+                    <p>4088 Radcliffe Drive, Vineland | <button class="simple">Edit Listing</button> | <button class="simple">Unlist Listing</button></p>
+                    <p>Incoming Offers:</p>
+                </div>
+            </div>
+
+            <div class="middle-right">
+                <div class="subtitle">Your Bookmarked Properties</div>
+                <div class="subsection">
+                    <p><a class="address" href="house.html">2023 Procters Drive, Toronto</a></p>
+                    <p class = "line"></p>
+                    <p><a class="address" href="house.html">4490 Elms Walk, St. Catharines</a></p>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="subtitle">Your Outgoing Offer</div>
+                <div class="subsection">
+                    <p><a class="address" href="house.html">2023 Procters Drive, Toronto</a></p>
+                    <p>$890,000 CAD</p>
+                    <p><button class="simple">Edit Offer</button></p>
+                    <p><button class="simple">Withdraw Offer</button></p>
+                </div>
+            </div>
         </div>
 
         <div class="chat-popup" id="chat-window">
@@ -56,8 +90,7 @@
 
         function logout(){
             localStorage.setItem("log-status", "out");
-            localStorage.setItem("new-mode", "buy");
-            window.location.href = "buy.html";
+            window.location.href = "index.html";
         }
 
         function openChat() {

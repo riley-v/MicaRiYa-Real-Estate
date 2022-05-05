@@ -13,7 +13,6 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 .header {
@@ -89,6 +88,10 @@ a {
 .content {
     width: 100%;
     margin-top: 120px;
+}
+
+a {
+    color: black;
 }
 
 /* The popup chat - hidden by default */

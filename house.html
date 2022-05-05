@@ -26,7 +26,11 @@
 
     <div class="content">
         <div class="main-content">
-            <div class="subtitle">Address here</div>
+            <div class="subtitle">
+                <div></div>
+                <div class="subtitle-container">Address here</div>
+                <div class="heart-container"><button class="unfavorite" id="heart" onclick="favorite()">&#10084</button></div>
+            </div>
 
             <div class="gallery">
                 <button class="navigate"> &lt </button>
@@ -54,6 +58,7 @@
 
     <script>
         var access = false;
+        var fav = false;
 
         function setMode(){
             if(localStorage.getItem("log-status") == "in"){
@@ -85,6 +90,18 @@
         function rent(){
             localStorage.setItem("new-mode", "rent");
             window.location.href = "buy.html";
+        }
+
+        function favorite(){
+            if(fav){
+                document.getElementById("heart").classList.remove('favorite');
+                document.getElementById("heart").classList.add('unfavorite');
+                fav = false;
+            }else{
+                document.getElementById("heart").classList.remove('unfavorite');
+                document.getElementById("heart").classList.add('favorite');
+                fav = true;
+            }
         }
 
         function openChat() {
